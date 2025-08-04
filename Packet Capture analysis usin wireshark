@@ -1,0 +1,8 @@
+Analyzing Packet capture using wireshark
+
+Filters Applied:
+ip.addr==192.168.245.131             | To show all traffic from or to source
+tcp.flags.syn==1 && tcp.flags.ack==0 | Shows all the outgoing packets from the source
+tcp.flag.syn==1 && tcp.flags.ack==1  | SYN-ACK responses from open ports
+tcp.flags.reset==0                   | RST responses from closed ports
+tcp.flags.syn==1                     | Shows both SYN and SYN-ACK packets
