@@ -1,0 +1,6 @@
+| **Port** | **Protocol** | **Service**                  | **Description**                                                                                                                                                                                |
+| -------- | ------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 53       | TCP          | **DNS (Domain Name System)** | Used for **zone transfers** and **DNS over TCP**, typically when:
+                                                           A DNS response is too large for UDP
+                                                           Reliability is needed
+                                                           Zone transfer (AXFR/IXFR) between DNS servers 
