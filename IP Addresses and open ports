@@ -1,0 +1,13 @@
+Nmap scan report for 192.168.245.1
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.245.2
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE    VERSION
+53/tcp open  tcpwrapped
+
+Nmap scan report for 192.168.245.254
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.245.131
+All 1000 scanned ports on 192.168.245.131 are in ignored states.
