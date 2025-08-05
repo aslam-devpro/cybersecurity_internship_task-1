@@ -1,0 +1,10 @@
+Commands Used:
+
+1.Find IP addressess in local range
+>>>ifconfig
+
+2.TCP SYN Scan with version detection
+>>>nmap -sS -sV 192.168.245.0/24
+
+3.Save Output to a file
+>>>nmap -sS -sV 192.168.245.0/24 -oN scanned_subnet.txt
