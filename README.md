@@ -5,6 +5,11 @@
 ### 🧰 Nmap Version: 7.95  
 ### 🌐 Target Subnet: `192.168.245.0/24`  
 
+### Tools Used:
+->Nmap:For port scanning and host scanning
+
+->Wireshark:For capturing and analyzing network traffic
+
 ### 🖥️ Summary of Detected Hosts
 
 | IP Address        | MAC Address         | Host Status | Open Ports    | Service    |
