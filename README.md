@@ -5,7 +5,8 @@
 ### 🧰 Nmap Version: 7.95  
 ### 🌐 Target Subnet: `192.168.245.0/24`  
 
-🖥️ Summary of Detected Hosts
+### 🖥️ Summary of Detected Hosts
+
 | IP Address        | MAC Address         | Host Status | Open Ports    | Service    |
 | ----------------- | ------------------- | ----------- | ------------- | ---------- |
 | `192.168.245.1`   | 00:50:56\:C0:00:08  | Up          | None          | -          |
@@ -13,41 +14,49 @@
 | `192.168.245.254` | 00:50:56\:E9:28:33  | Up          | None          | -          |
 | `192.168.245.131` | Not Shown           | Up          | None          | -          |
 
-🚨 Analysis of Findings
+
+### 🚨 Analysis of Findings
+
 ✅ Host: 192.168.245.2
 Port 53/tcp is open and tcpwrapped, indicating a DNS service with additional security layers (e.g., firewall, proxy, or access control).
 
 All other ports on all other hosts are either filtered or closed.
 
 What Does "tcpwrapped" Mean?
+
 It typically indicates that the service is protected by a generic TCP wrapper.
 
 Access control might be applied using tools like /etc/hosts.allow or firewalls.
 
-🔐 Security Implications of Port 53 Being Open
-Risk	Description
-Zone Transfer Leak	If TCP port 53 is misconfigured, attackers can perform DNS zone transfers (AXFR) to enumerate internal DNS records.
-DNS Tunneling	Port 53 is commonly abused to exfiltrate data over DNS queries.
-Reconnaissance	Attackers can use the DNS service to map out internal infrastructure.
-DDoS Amplification	If this host is also handling UDP DNS queries, it could be abused in amplification attacks.
 
-🛡️ Recommendations
-Restrict TCP port 53 access to trusted IPs only.
+### 🔐 Security Implications of Port 53 Being Open
 
-If DNS is unnecessary on this machine, disable it.
+| **Risk**               | **Description**                                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Zone Transfer Leak** | If TCP port 53 is misconfigured, attackers can perform DNS zone transfers (AXFR) to enumerate internal DNS records. |
+| **DNS Tunneling**      | Port 53 is commonly abused to exfiltrate data over DNS queries.                                                     |
+| **Reconnaissance**     | Attackers can use the DNS service to map out internal infrastructure.                                               |
+| **DDoS Amplification** | If this host is also handling UDP DNS queries, it could be abused in amplification attacks.                         |
 
-Audit the DNS server configuration to ensure:
 
-Zone transfers are disabled or restricted.
+### 🛡️ Recommendations
 
-Logging is enabled for DNS queries.
+1.Restrict TCP port 53 access to trusted IPs only.
 
-DNSSEC is implemented if public-facing.
+2.If DNS is unnecessary on this machine, disable it.
 
-📌 Notes
-Only 1 out of 4 active hosts responded with an open TCP port (Port 53).
+3.Audit the DNS server configuration to ensure:
 
-All other ports were either filtered (firewalled) or reset (closed).
+4.Zone transfers are disabled or restricted.
+
+5.Logging is enabled for DNS queries.
+
+6.DNSSEC is implemented if public-facing.
+
+### 📌 Notes
+-Only 1 out of 4 active hosts responded with an open TCP port (Port 53).
+
+-All other ports were either filtered (firewalled) or reset (closed).
 
 ### 🧪 Command Used:
 ```bash
