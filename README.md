@@ -4,12 +4,8 @@
 ### 📅 Scan Date: Mon Aug 4, 2025  
 ### 🧰 Nmap Version: 7.95  
 ### 🌐 Target Subnet: `192.168.245.0/24`  
-### 🧪 Command Used:
-```bash
-/usr/lib/nmap/nmap --privileged -sS -sV -oN scanned_subnet.txt 192.168.245.0/24
 
-
-#Summary Of Detected Hosts
+🖥️ Summary of Detected Hosts
 | IP Address        | MAC Address         | Host Status | Open Ports    | Service    |
 | ----------------- | ------------------- | ----------- | ------------- | ---------- |
 | `192.168.245.1`   | 00:50:56\:C0:00:08  | Up          | None          | -          |
@@ -52,3 +48,7 @@ DNSSEC is implemented if public-facing.
 Only 1 out of 4 active hosts responded with an open TCP port (Port 53).
 
 All other ports were either filtered (firewalled) or reset (closed).
+
+### 🧪 Command Used:
+```bash
+/usr/lib/nmap/nmap --privileged -sS -sV -oN scanned_subnet.txt 192.168.245.0/24
