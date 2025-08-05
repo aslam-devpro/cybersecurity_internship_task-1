@@ -1,0 +1,8 @@
+| **Risk**                           | **Protocol** | **Description**                                                       | **Mitigation**                                           |
+| ---------------------------------- | ------------ | --------------------------------------------------------------------- | -------------------------------------------------------- |
+| **DNS Amplification Attack**       | UDP          | Used in DDoS by reflecting large DNS responses to spoofed IPs.        | Block external queries or use rate limiting.             |
+| **Zone Transfer Leak**             | TCP          | Misconfigured servers may allow attackers to download DNS zone files. | Restrict zone transfers to authorized IPs.               |
+| **DNS Tunneling**                  | UDP/TCP      | Covert channel to exfiltrate data via DNS queries.                    | Monitor DNS traffic for anomalies; use DNS firewall/DPI. |
+| **DNS Spoofing / Cache Poisoning** | UDP          | Trick systems into connecting to malicious IPs.                       | Use DNSSEC and up-to-date resolvers.                     |
+| **Open DNS Resolver Exposure**     | UDP          | Public resolvers can be abused in attacks.                            | Restrict access using firewalls or IP filters.           |
+| **Information Disclosure**         | TCP/UDP      | Reveals internal hostnames or network structure.                      | Avoid exposing internal DNS info; secure zone files.     |
